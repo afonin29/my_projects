@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 #field {
   background-image: url("./assets/court.png");
   width: 1024px;
@@ -11,5 +16,10 @@
   height: 50px;
   left: 487px;
   top: 250.5px; }
+
+#out {
+  display: flex; }
+  #out #first, #out #second {
+    width: 50%; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,11 @@
 @import 'variables.scss';
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #field {
     background-image: url('./assets/court.png');
     width: $width;
@@ -15,3 +21,11 @@
     left: $width/2 - $ball_width/2;
     top: $height/2 - $ball_height/2;
 }
+
+#out {
+    display: flex;
+    #first, #second {
+        width:50%;
+    }
+}
+
