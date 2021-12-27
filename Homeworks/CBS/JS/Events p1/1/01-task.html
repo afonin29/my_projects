@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            margin:1px;
+        }
+        p {
+            margin:1px;
+        }
+    </style>
+    <script src="01-task.js"></script>
+</head>
+<body>
+    <pre>
+        Создайте страницу-калькулятор.
+        Разместите на странице два поля ввода и кнопки для арифметических операций над данными введенными в поля ввода. 
+        Реализуйте данную страницу двумя способами – с использованием модели DOM Level 0 (через свойства) и DOM Level 2
+    </pre>
+    <p>DOM Level 0</p>
+    <p id="p1">Первое число:</p>
+    <input type="number" id="text1"><br>
+    <p id="p1">Второе число:</p>
+    <input type="number" id="text2"><br>
+    <input type="button" value="+" id="add" onclick="add()">
+    <input type="button" value="-" id="minus" onclick="minus()">
+    <input type="button" value="*" id="multiply" onclick="multiply()">
+    <input type="button" value="/" id="divide" onclick="divide()">
+    <br>
+    <input type="number" id="result"><br><br><br><br>
+
+    <p>DOM Level 2</p>
+    <p id="p1">Первое число:</p>
+    <input type="number" id="text11"><br>
+    <p id="p1">Второе число:</p>
+    <input type="number" id="text21"><br>
+    <input type="button" value="+" id="add1">
+    <input type="button" value="-" id="minus1">
+    <input type="button" value="*" id="multiply1">
+    <input type="button" value="/" id="divide1">
+    <br>
+    <input type="number" id="result1">
+</body>
+</html>

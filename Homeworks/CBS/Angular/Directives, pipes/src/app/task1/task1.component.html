@@ -1,0 +1,6 @@
+<ul type="circle">
+    <li *ngFor="let fruit of fruits, let i = index" (click)="getInfo(i)">{{i+1}} fruit - {{fruit}}</li>
+</ul>
+<div [style.display] = "visibility">Last result: {{message}}</div>
+<input type="text" #input1>
+<button (click)="addFruit(input1.value)">Add fruit</button>

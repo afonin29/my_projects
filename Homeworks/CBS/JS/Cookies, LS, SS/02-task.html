@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <script src="02-task.js"></script>
+    <style>
+        input {
+            margin: 2px;
+        }
+        p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>Покупка товара</p>
+    Телевизор<select id="tv">
+        <option>Не выбрано</option>
+        <option value="8800" data-name="04001">Samsung S600 32'</option>
+        <option value="11000" data-name="04058">LG V041 40'</option>
+        <option value="13000" data-name="02627">Sharp SH4F5 43'</option>
+        <option value="28000" data-name="07361">LG Q309 67'</option>
+        <option value="7990" data-name="01511">Bravis SF2 39'</option>
+        <option value="10000" data-name="07346">Samsung SProf 32'</option>
+        <option value="28500" data-name="07766">Philips Ultra3 70'</option>
+    </select>
+    Артикул <input type="text" id="art">
+    Цена <input type="text" id="price"><br>
+    
+    <input type="button" value="Купить" id="buy">
+    <a href="02-task2.html"><input type="button" value="Корзина" id="cart"></a>
+</body>
+</html>

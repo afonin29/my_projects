@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправка POST параметров</title>
+    <script>
+        window.onload = function () {
+            let btn1 = document.getElementById("b1");
+            let n1 = document.getElementById("n1");
+            let n2 = document.getElementById("n2");
+            let a, b;
+
+            btn1.onclick = function () {
+            
+            let xhr = new XMLHttpRequest();
+            a = n1.value;
+            b = n2.value;
+
+            xhr.open("POST", "CalcHandler.ashx");
+            
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+
+                    document.getElementById("output").innerHTML = xhr.responseText;
+                }
+            }
+
+            xhr.send("a="+a+"&b="+b);
+        }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <input type="button" value="Click" id="b1">
+
+    <p id="output"></p>
+</body>
+</html>

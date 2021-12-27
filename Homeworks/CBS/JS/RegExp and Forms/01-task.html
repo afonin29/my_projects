@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:-webkit-autofill,
+        input:-webkit-autofill:focus {
+         transition: background-color 600000s 0s, color 600000s 0s;
+        }
+        p {
+            font-weight: bold;
+            font-style: italic;
+        }
+        p#cost {
+            height: 20px;
+            color: black;
+            font-size: 16px;
+        }
+        input.invalid {
+            background-color: Pink;
+        }
+
+        input.valid {
+            background-color: LightGreen;
+        }
+    </style>
+    <script src="01-task.js"></script>
+</head>
+<body>
+    <p id="order">Заказ пиццы:</p>
+    <img src="https://academy.oetker.ru/upload/iblock/195/19519a82c8131d46d8e7a4718fb7e2d2.png" width="200px" height="140px"><br>
+    <form id="form1">
+        <input type="radio" name="radio1" value="100">Маленькая
+        <input type="radio" name="radio1" value="170">Средняя
+        <input type="radio" name="radio1" value="220">Большая<br>
+        <input type="checkbox" name="mushrooms" value="20">Грибы<br>
+        <input type="checkbox" name="tomato" value="10">Помидоры<br>
+        <input type="checkbox" name="cheese" value="25">Сыр<br>
+        <input type="checkbox" name="olives" value="25">Оливки<br>
+        <input type="checkbox" name="bacon" value="35">Бекон<br>
+        <input type="button" value="Сбросить заказ" id="reset">
+
+        <p id="cost"></p>
+    <p id="user">Информация о заказчике:</p>
+        <label>Телефон </label><input type="text" name="phone" placeholder="+380501234567"><br>
+        <label>Адрес </label> <input type="text" name="address" placeholder="Ломоносова, 67"><br>
+        <input type="submit" value="Заказать!" id="submit">
+    </form>
+</body>
+</html>

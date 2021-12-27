@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src = "module1.js"></script> -->
+</head>
+<body>
+    <pre>
+        Создайте страницу с кнопкой, при нажатии по кнопке на странице должен создаваться параграф с произвольным текстом. 
+        После создания 10 параграфов все они должны быть удалены.
+    </pre>
+    <script>
+    let counter = 0;
+    function createNewElement() {
+        counter++;
+        let newP = document.createElement("p");
+        newP.innerHTML = "New P " + counter;
+        myButton = document.getElementById("mybutton");
+        document.body.insertBefore(newP, myButton);
+        
+        if (counter == 10) {
+            paragraphs = document.getElementsByTagName("p");
+            
+            for (let i = (paragraphs.length - 1); i >= 0; i--) {
+                let elem = paragraphs[i];
+                elem.remove();
+            }
+        }
+    }
+    </script>
+    <button id="mybutton" onclick = "createNewElement()">Click</button>
+</body>
+</html>

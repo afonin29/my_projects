@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <script src="02-task.js"></script>
+    <style>
+        span {
+            color: red;
+            font-weight: bold;
+        }
+
+        .header {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Так как у меня не пропускают браузеры сайт https://openrates.io/, я взял инфо с сайта приватбанка -->
+    <p class="header">Через АПИ - курс покупки</p>
+    <p id = "eur">Курс евро к гривне: </p><span id="eur1"></span>
+    <p id = "usd">Курс доллара США к гривне: </p><span id="usd1"></span><br />
+    <button id="but1">CLICK</button><br /><br /><br /><br /><br />
+    <p class="header">Через fetch - курс продажи</p>
+    <p id = "eurx">Курс евро к гривне: </p><span id="eur2"></span>
+    <p id = "usdx">Курс доллара США к гривне: </p><span id="usd2"></span><br />
+    <button id="but2">CLICK</button><br />
+</body>
+</html>

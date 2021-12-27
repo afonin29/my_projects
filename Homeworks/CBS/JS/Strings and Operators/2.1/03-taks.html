@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+
+<body>
+    <pre>
+        Задание:
+        1) запросите у пользоватля сколько он хочет купить единиц товара
+        2) выведите на экран какую сумму должен внести пользователь с учетом количества покупаемых единиц
+        3) выведите на экнан сколько единиц товара останется на складе после покупки
+    </pre>
+
+    <script>
+        let productPrice = 101.5; // цена товара
+        let productQuantity = 50;  // количество единиц товара на складе
+        let qty = prompt("Сколько товара желаете купить?");
+        if (qty > productQuantity) {
+            let qty = productQuantity;
+            let balance = productQuantity - qty;
+            let cost = qty * productPrice;
+            let a = confirm(`На складе есть всего ${productQuantity} единиц продукции. Хотите купить такое количество?`)
+                if (a==true) {
+                    alert(`Вы должны заплатить ${cost} грн`)
+                    alert(`На складе осталось ${balance} единиц`)
+                } else {
+                    alert("Приходите еще!")
+                }
+        } else {
+            let cost = qty * productPrice;
+            let balance = productQuantity - qty;
+            alert(`Вы должны заплатить ${cost} грн`)
+            alert(`На складе осталось ${balance} единиц`)
+        }
+    </script>
+</body>
+
+</html>
+

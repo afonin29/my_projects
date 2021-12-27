@@ -1,0 +1,1 @@
+I only took part in editing some parts - architecture was done not by me

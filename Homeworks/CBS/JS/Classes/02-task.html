@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Разработайте класс Human (человек), добавьте на свое усмотрение свойства и методы в этот объект. 
+        Подумайте, какие методы и свойства следует оставить в родительском классы, а какие перенести в дочерние классы Student, Worker, Manager. 
+        Создайте экземпляры этих классов.
+    </pre>
+    <script>
+        class Human {
+            constructor(name, age, city) {
+            this.name = name;
+            this.age = age;
+            this.city = city;
+        }
+        call() { 
+            console.log(`Привет, меня зовут ${this.name}, мне ${this.age} лет, я из города ${this.city}`) 
+        }
+        }
+        class Student extends Human {
+            constructor(name, age, city, university) {
+            super(name, age, city);
+            this.university = university;
+            }
+            
+            from() {
+                super.call()
+                console.log(`Я учусь в ${this.university}`)
+            }
+        }
+        class Worker extends Human {
+            constructor(name, age, city, position) {
+                super(name, age, city);
+                this.position = position;
+            }
+            
+            work() {
+                super.call()
+                console.log(`Я работаю на позиции ${this.position}`)
+            }
+        }
+        class Manager extends Human {
+            constructor(name, age, city, company) {
+                super(name, age, city);
+                this.company = company;
+            }
+            whereWork() {
+                super.call()
+                console.log(`Я работаю в компании ${this.company}`)
+            }
+        }
+        let myHuman = new Human("Семен", 28, "Киев");
+        let myStudent1 = new Student("Иван", 19, "Львов", "КПИ");
+        let myStudent2 = new Student("Дмитрий", 21, "Харьков", "КНУ");
+        let myWorker1 = new Worker("Савелий", 31, "Львов", "инженер");
+        let myWorker2 = new Worker("Антон", 28, "Киев", "разработчик ПО");
+        let myManager1 = new Manager("Елена", 41, "Харьков", "JTI");
+        let myManager2 = new Manager("Артем", 39, "Киев", "Данон");
+
+        myHuman.call();
+        myStudent1.from();
+        myStudent2.from();
+        myWorker1.work();
+        myWorker2.work();
+        myManager1.whereWork();
+        myManager2.whereWork();
+    </script>
+</body>
+</html>

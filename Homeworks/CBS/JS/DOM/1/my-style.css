@@ -1,0 +1,14 @@
+.first {
+    background-color: orchid;
+    border: 5px solid black;
+}
+.second {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: purple;
+    border: 3px dotted green;
+    color: white;
+}
+.third {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

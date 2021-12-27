@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Создайте одну глобальную переменную с произвольным значением и две функции. 
+        Продемонстрируйте, что глобальная переменная может использоваться в этих двух функциях.
+    </pre>
+    <script>
+        let value = 15;
+        function f1(x) {
+            z = x % 3;
+            if (z ==0 ) {
+                console.log("Divides by 3")
+            } else {
+                console.log("Not divides by 3")
+            }
+        }
+        function f2(x) {
+            z = x % 5;
+            if (z ==0 ) {
+                console.log("Divides by 5")
+            } else {
+                console.log("Not divides by 5")
+            }
+        }
+        f1(value);
+        f2(value)
+    </script>
+</body>
+</html>

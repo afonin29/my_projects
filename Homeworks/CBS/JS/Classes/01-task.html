@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArray = [];
+        class Human {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            toArray(array) {
+                array.push(this);
+            }
+        }
+        let min = Number.MIN_VALUE;
+        function sortByAge(array) {
+            array.sort((a, b) => a.age > b.age ? 1 : -1)
+        }
+
+
+        let hum1 = new Human("Иван", 22);
+        hum1.toArray(myArray);
+        let hum2 = new Human("Денис", 16);
+        hum2.toArray(myArray);
+        let hum3 = new Human("Алла", 31);
+        hum3.toArray(myArray);
+        let hum4 = new Human("Жора", 28);
+        hum4.toArray(myArray);
+        let hum5 = new Human("Григорий", 25);
+        hum5.toArray(myArray);
+        let hum6 = new Human("Сергей", 11);
+        hum6.toArray(myArray);
+        let hum7 = new Human("Дмитрий", 28);
+        hum7.toArray(myArray);
+        let hum8 = new Human("Елена", 43);
+        hum8.toArray(myArray);
+
+        sortByAge(myArray);
+        console.log(myArray);
+
+    </script>
+</body>
+</html>

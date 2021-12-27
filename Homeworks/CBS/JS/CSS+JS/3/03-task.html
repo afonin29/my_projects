@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width:50px;
+            height:20px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 2px;
+            position:relative;
+        }
+    </style>
+    <script>
+        let div1,
+            div2,
+            div3;
+
+        let rand11, rand12, rand21, rand22, rand31, rand32;
+        let maxWidth, maxHeight;
+
+        window.onload = function() {
+            div1 = document.getElementById("div1"),
+            div2 = document.getElementById("div2"),
+            div3 = document.getElementById("div3");
+            maxWidth = document.documentElement.clientWidth;
+            maxHeight = document.documentElement.clientHeight;
+            setInterval(animate, 1000);
+        }
+
+        function animate() {
+            rand11 = Math.round(0 - 0.5 + Math.random() * (maxWidth - 0 + 1), 0);
+            rand21 = Math.round(0 - 0.5 + Math.random() * (maxWidth - 0 + 1), 0);
+            rand31 = Math.round(0 - 0.5 + Math.random() * (maxWidth - 0 + 1), 0);
+            rand12 = Math.round(0 - 0.5 + Math.random() * (maxHeight - 0 + 1), 0);
+            rand22 = Math.round(0 - 0.5 + Math.random() * (maxHeight - 0 + 1), 0);
+            rand32 = Math.round(0 - 0.5 + Math.random() * (maxHeight - 0 + 1), 0);
+            
+            div1.style.left = rand11 + "px";
+            div2.style.left = rand21 + "px";
+            div3.style.left = rand31 + "px";
+            div1.style.top = rand12 + "px";
+            div2.style.top = rand22 + "px";
+            div3.style.top = rand32 + "px";
+            console.log(rand11, rand21, rand31, rand12, rand22, rand32)
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" style ="background-color: red;">Div 1</div>
+    <div id="div2" style ="background-color: blue">Div 2</div>
+    <div id="div3" style ="background-color: green">Div 3</div>
+</body>
+</html> 

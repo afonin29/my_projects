@@ -1,0 +1,144 @@
+#about .box:hover h2 {
+    background-color: lightblue;
+    color:white;
+}
+
+p::first-letter {
+    color: lightskyblue;
+    font-size: 30px;
+} 
+
+p.tm-banner-text::first-letter {
+    color: #666;
+    font-size: 1.4em;
+}
+
+.flex-2-col p.tm-section-description::first-letter {
+    margin-left: 1.5rem;
+} 
+.flex-2-col p.tm-section-description {
+    line-height: 2rem;
+}
+
+.tm-banner {
+    border-color: grey;
+    background-color: #f5f5f5;
+}
+
+.tm-banner-inner {
+    background-color: white;
+}
+
+.tm-content-box, .tm-main-nav {
+    box-shadow: 0 0 5px;
+} 
+
+.flex-2-col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section::before {
+    height: 0px;
+    width: 0px;
+    border-width: 30px 240px 0px 0px;
+    border-color: #5ccbda transparent;
+    border-style: solid;
+    content: '';
+}
+
+.carousel-content h2.tm-section-title {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+
+h2 + p {
+    font-style: italic;
+}
+
+.padding-medium a:visited {
+    text-decoration: underline;
+}
+
+.padding-medium a:hover {
+    color: lightblue;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.padding-medium a.text:after {
+    position: absolute;
+    content: "New";
+    color: red;
+    vertical-align: super;
+    font-size: 0.7rem;
+}
+
+li.box p::first-letter{
+    color:black;
+}
+
+.blocks .tm-content-box ul div {
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+.blocks .tm-content-box li:nth-child(even) {
+    background-color: rgb(245, 245, 245);
+}
+
+.padding-medium li a {
+    color: black;
+}
+
+.submit-btn {
+    float: right;
+    width:9em;
+    height: 3em;
+    background-color: white;
+    color:rgb(160, 217, 251);
+    border-color: rgb(160, 217, 251);
+    border-radius: 0;
+}
+
+button.submit-btn:hover {
+    background-color: rgb(160, 217, 251);
+    color:white;
+    border-color: rgb(160, 217, 251);
+    border-radius: 0;
+}
+
+ .tm-content-box .padding-medium .mandatory-field:after {
+    content: "*";
+    color: red;
+}
+
+@media print {
+    h2.tm-section-title {
+        color: blue;
+    }
+
+    .tm-sidebar, #about, .heading, .blocks, #ideas, .img-fluid, #contact  {
+        display: none;
+    }
+
+    section::before {
+        height: 0px;
+        width: 0px;
+        border-width:0px;
+        border-color: inherit;
+        border-style: inherit;
+    }
+    .flex-item img {
+        width:70%;
+        float:right;
+    }
+    .tm-team-description-container {
+        width: 100%;
+    }
+}
+
+nav li:hover {
+    background-color: rgb(245, 245, 245);
+}

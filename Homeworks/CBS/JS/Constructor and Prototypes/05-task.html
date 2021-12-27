@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Создайте функцию-конструктор Box (коробка) для создания объекта со свойствами Height (высота), 
+        Width (ширина), Depth (глубина) и Material (материал). 
+        Также, в объекте должны быть методы Volume – для получения объема и equals() – 
+        для сравнения объектов, объекты должны считаться равными, если содержат одинаковые значения в свойстве Material.
+    </pre>
+    <script>
+        function Box(height, width, depth, material) {
+            this.height = height;
+            this.width = width;
+            this.depth = depth;
+            this.material = material;
+
+            let volume = 0;
+            // this.volume = function() {
+            //     this.volume = this.height * this.width * this.depth;
+            //     console.log(`Обьем фигуры: ${this.volume}`)
+            // }
+        }
+
+        Box.prototype.volume = function() {
+                return this.volume = this.height * this.width * this.depth;
+        }
+
+        Box.prototype.equals = function (otherObj) {
+            if (this.material == otherObj.material) {
+                return "equal"
+            } else {
+                return "not equal"
+            }
+        }
+        
+        box1 = new Box(20, 30, 5, "iron");
+        box2 = new Box(25, 30, 3, "wood");
+        box3 = new Box(30, 30, 5, "iron");
+
+
+        let volume1 = box1.volume();
+        console.log(`Обьем коробки: ${volume1}`);
+        let volume2 = box2.volume();
+        console.log(`Обьем коробки: ${volume2}`);
+        let volume3 = box3.volume();
+        console.log(`Обьем коробки: ${volume3}`);
+
+        let res1 = box1.equals(box2);
+        console.log(`Boxes' materials are ${res1}`)
+        let res2 = box1.equals(box3);
+        console.log(`Boxes' materials are ${res2}`)
+        
+    </script>
+</body>
+</html>

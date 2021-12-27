@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Создайте пример демонстрирующий назначение метода toString().
+    </pre>
+    <script>
+        myArray = [];
+        function Student(name, group, course) {
+            this.name = name;
+            this.group = group;
+            this.course = course;
+
+            this.pushToArray = function (array) {
+                array.push(this);
+            }
+        }
+        Student.prototype.toString = function() {
+            return "Студента зовут " + this.name + ". Он учится в группе " + this.group + " на " + this.course + " курсе."
+        }
+
+        let st1 = new Student("Семен", "Маркетинг-2", "3");
+        let st2 = new Student("Инна", "Менеджмент-4", "1");
+        let st3 = new Student("Дмитрий", "Разработка ПЗ", "2");
+
+        st1.pushToArray(myArray);
+        st2.pushToArray(myArray);
+        st3.pushToArray(myArray);
+
+        for (i = 0; i < myArray.length; i++) {
+            console.log(myArray[i].toString());
+        }
+    </script>
+</body>
+</html>

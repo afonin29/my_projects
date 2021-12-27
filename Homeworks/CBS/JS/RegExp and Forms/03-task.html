@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <script src="03-task.js"></script>
+    <style>
+        label {
+            width:200px;
+            float:left;
+        }
+        form {
+            position:relative;
+            left:10%;
+            width:80%;
+        }
+        p#headerform {
+            font-weight: bold;
+            font-size:18px;
+            font-family: Arial, Helvetica, sans-serif;
+            position:relative;
+            text-align: center;
+        }
+        input#submit {
+            position:relative;
+        }
+        input {
+            margin: 1.5px;
+        }
+        .error {
+            background-color: #fc6363;
+        }
+        .valid {
+            background-color: #81e569;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1">
+        <p id="headerform">Форма регистрации</p>
+        <label>Имя</label><input type="text" name="name" required
+        data-pattern="[a-zA-Zа-яА-ЯІіЇїЁё]"
+        data-err-msg="Имя может содержать только буквы"
+        data-msg-id="nameMsg"><span id="nameMsg"></span><br>
+        <label>Фамилия</label><input type="text" name="surname" required
+        data-pattern="[a-zA-Zа-яА-ЯІіЇїЁё]"
+        data-err-msg="Фамилия может содержать только буквы"
+        data-msg-id="surnameMsg"><span id="surnameMsg"></span><br>
+        <label>Логин</label><input type="text" name="login" required
+        data-pattern="\S\d"
+        data-err-msg="Логин должен содержать латинские буквы и цифры"
+        data-msg-id="loginMsg"><span id="loginMsg"></span><br>
+        <label>Пароль</label><input type="password" name="password" id="password" required
+        data-pattern="[A-Za-z0-9].{7,}"
+        data-err-msg="Пароль должен содержать минимум 8 символов, содержать цифры, буквы латинского алфавити верхнего и нижнего регистра"
+        data-msg-id="passwordMsg"><span id="passwordMsg"></span><br>
+        <label>Подтверждение пароля</label><input type="password" name="confirm" id="confirm" required><span id="confirmMsg"></span><br>
+        <label>E-mail</label><input type="text" name="email" required
+        data-pattern="\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b"
+        data-err-msg="Введите правильный e-mail"
+        data-msg-id="emailMsg"><span id="emailMsg"></span><br>
+        <label>Пол</label><input type="radio" name="gender" required>Мужчина
+        <input type="radio" name="gender" required>Женщина<br>
+        <input type="submit" value="Зарегистрироваться" id="submit" required>
+        <p id="error"></p>
+    </form>
+</body>
+</html>

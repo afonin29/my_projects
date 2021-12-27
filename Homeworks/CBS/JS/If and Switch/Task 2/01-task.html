@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <pre>
+        Создайте сценарий. Запросите у пользователя его возраст. 
+        Если возраст пользователя больше 18 – выведите на экран сообщение «доступ разрешен». 
+        Если введенное пользователем значение меньше 18 - выведите на экран сообщение «доступ запрещен»
+    </pre>
+    <script>
+        let a = +prompt("Сколько Вам лет?", 18)
+        if (a>=18) {
+            alert("Доступ разрешен")
+        }
+        else if (a<18 && a>0) {
+            alert("Доступ запрещен")
+        }
+        else {
+            alert("Введите корректное значение")
+        }
+    </script>
+</body>
+</html>

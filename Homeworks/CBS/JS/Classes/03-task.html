@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Создайте класс Box (коробка) для создания объекта со свойствами Height (высота), Width (ширина), 
+        Depth (глубина) и Material (материал). Также, в объекте должны быть методы Volume – для получения объема.
+    </pre>
+    <script>
+        class Box {
+            constructor(height, width, depth, material) {
+                this.height = height;
+                this.width = width;
+                this.depth = depth;
+                this.material = material;
+            }
+            volume() {
+                return this.height * this.width * this.depth;
+            }
+        }
+        let Box1 = new Box(12, 5, 2, "wood");
+        let Box2 = new Box(6, 15, 4, "plastic");
+        console.log(Box1.volume());
+        console.log(Box2.volume());
+    </script>
+</body>
+</html>

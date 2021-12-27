@@ -1,0 +1,12 @@
+li:hover {
+    background-color: lightpink;
+    font-weight: bold;
+}
+
+li:active {
+    background-color: lightyellow;
+}
+
+input {
+    margin: 1px;
+}

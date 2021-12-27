@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Разработайте функцию-конструктор, которая будет создавать объект Human (человек), добавьте на свое усмотрение свойства и методы в этот объект. 
+        Подумайте, какие методы и свойства следует сделать уровня экземпляра, а какие уровня функции-конструктора.
+    </pre>
+    <script>
+        let myArray = [];
+        function Human(name, age, nationality, hobby, favoriteColor) {
+            this.name = name;
+            this.age = age;
+            this.nationality = nationality;
+            this.hobby = hobby;
+            this.favoriteColor = favoriteColor;
+
+            this.print = function() {
+                console.log(`Пользователя зовут ${name}, ему ${age} лет, национальность: ${nationality}. У него хобби: ${hobby}, любимый цвет: ${favoriteColor}`)
+                myArray.push(this);
+            }
+        }
+
+        Human.maxAge = 100;
+        Human.minAge = 0;
+
+
+        let user1 = new Human("Дима", "31", "украинец", "спорт", "красный");
+        let user2 = new Human("Джон", "37", "американец", "бейсбол", "желтый");
+        let user3 = new Human("Сердар", "34", "узбек", "танцы", "белый");
+        let user4 = new Human("Иван", "47", "украинец", "пение", "фиолетовый");
+
+        user1.print();
+        user2.print();
+        user3.print();
+        user4.print();
+
+
+
+        function maxAge(array) {
+            min = Number.MIN_VALUE;
+            console.log(array.length)
+            for (i = 0; i < myArray.length; i++) {
+                elem = Number(myArray[i].age);
+                console.log(elem);
+                if (elem > min) {
+                    min = elem;
+                }
+            }
+            for (i = 0; i < myArray.length; i++) {
+                elem = Number(myArray[i].age);
+                nameOldest = myArray[i].name;
+                if (elem == min) {
+                    console.log("Самый старший: " + nameOldest + " - его возраст: " + min);
+                }
+            }
+        }
+
+        maxAge(myArray);
+    </script>
+</body>
+</html>

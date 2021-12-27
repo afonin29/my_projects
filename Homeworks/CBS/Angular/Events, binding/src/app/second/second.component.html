@@ -1,0 +1,7 @@
+<body contenteditable="false" (keydown.arrowleft)="decrease()" (keydown.arrowright)="increase()">
+<img [src]="carImages[counter]" [width]="imageWidth" [height]="imageHeight"><br />
+<button (click)="decrease()">Previous</button>
+<button (click)="increase()">Next</button>
+</body>
+
+<!-- получается реализовать прокрутку с клавиатуры только после нажатия на кнопки -->

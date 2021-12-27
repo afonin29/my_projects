@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
+    </pre>
+    <script>
+        var newArray = [];
+        function doubleValues(array) {
+            for (i = 0; i < array.length; i++) {
+                elem = array[i];
+                for (index = (i + 1); index < array.length; index++) {
+                    let checkElem = array[index];
+                    if (elem == checkElem) {
+                        newArray.push(elem);
+                    }
+                }
+            }
+            if (newArray.length == 0) {
+                console.log(null)
+            } else {
+                console.log(newArray)
+            }
+        }
+        let myArray = [1, 4, 5, 11, 5, 4, 11, 13];
+        doubleValues(myArray);
+    </script>
+</body>
+</html>

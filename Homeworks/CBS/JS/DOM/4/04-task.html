@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Создайте страницу, разместите на странице в произвольном порядке несколько параграфов, ссылок и элемент Div c id=test_div. 
+        Разместите на странице три кнопки – «выбрать все параграфы», «выбрать все ссылки», «выбрать DIV». 
+        При нажатии на каждую кнопку должна запускаться функция обработчик, которая добавит рамку определенного цвета на соответствующие элементы. 
+        Сделайте код JS ненавязчивым.
+    </pre>
+
+    <p>First</p>
+    <div id="test_div">DIV</div>
+    <a href="https://www.youtube.com/">YouTube</a><br>
+    <a href="https://www.youtube.com/">YouTube</a>
+    <p>Second</p>
+    <a href="https://www.youtube.com/">YouTube</a>
+    <p>Third</p>
+    <script src="module1.js"></script>
+    <button onclick="module1.highlightp()">Choose all paragraphs</button>
+    <button onclick="module1.highlightdiv()">Choose all divs</button>
+    <button onclick="module1.highlighta()">Choose all paragraphs</button>
+</body>
+</html>

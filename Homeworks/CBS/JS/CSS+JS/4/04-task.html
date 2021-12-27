@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            margin:3px;
+        }
+        div {
+            position: relative;
+            width: 70px;
+            height:20px;
+            background-color: red;
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+        let leftValue, upValue, maxWidth, maxHeight;
+        window.onload = function() {
+            let div1 = document.getElementById("div1");
+        }
+
+        function getStyle(element, styleName) {
+                if (element.currentStyle) { // получение доступа к Computed стилям для IE
+                    return element.currentStyle[styleName];
+                }
+                else if (window.getComputedStyle) { 
+                    return window.getComputedStyle(element, null)[styleName];
+                    //window.getComputedStyle(h3, ':after').content;
+                }
+            }
+
+        function leftClick() {
+            let coords = div1.getBoundingClientRect();
+            let leftValue = coords.left;
+
+            if (leftValue >= 100) {
+                leftValue -= 100;
+            } else {
+                leftValue = 0;
+            }
+
+            div1.style.left = leftValue + "px";
+        }
+
+        function rightClick() {
+            let coords = div1.getBoundingClientRect();
+            let leftValue = coords.left;
+            let maxWidth = (screen.width - 80);
+
+            if ((leftValue + 100) <= maxWidth) {
+                leftValue += 100;
+            } else {
+                leftValue = maxWidth;
+            }
+            div1.style.left = leftValue + "px";
+        }
+
+        function upClick() {
+            let coords = div1.getBoundingClientRect();
+            let upValue = coords.top;
+
+            if (upValue >= 100) {
+                upValue -= 100;
+            } else {
+                upValue = 0;
+            }
+
+            div1.style.top = upValue + "px";
+        }
+
+        function downClick() {
+            let coords = div1.getBoundingClientRect();
+            let upValue = coords.top;
+            let maxHeight = (screen.height - 25);
+
+            if ((upValue + 100) <= maxHeight) {
+                upValue += 100;
+            } else {
+                upValue = maxHeight;
+            }
+
+            div1.style.top = upValue + "px";
+        }
+
+    </script>
+</head>
+<body>
+    <div id="div1" style="left:200px;">This is div</div>
+    <input type="button" value="Вверх" onclick="upClick()"><br>
+    <input type="button" value="Вниз" onclick="downClick()"><br>
+    <input type="button" value="Влево" onclick="leftClick()"><br>
+    <input type="button" value="Вправо" onclick="rightClick()"><br>
+</body>
+</html>

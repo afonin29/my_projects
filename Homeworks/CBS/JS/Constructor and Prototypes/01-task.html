@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Создайте функцию конструктор, которая создает объект со свойством экземпляра, свойством функцииконструктора, 
+        с методом экземпляра и методом функции-конструктора. Имена выберите произвольно.
+    </pre>
+    <script>
+        function Animal(name, age) {
+            this.name = name; 
+            this.age = age;
+            this.graftNeed = "не надо";
+
+            this.graft = function() {
+                if ((this.age > 2 && this.age < 5) || (this.age > 7 && this.age < 10)) {
+                    this.graftNeed = "надо";
+                }
+            console.log(`Имя собаки: ${this.name}, возраст: ${this.age}, прививка: ${this.graftNeed}`);
+            }
+            this.print = function() {
+                document.write("Имя собаки: " + this.name + ", возраст: " + this.age + ". Гав!");
+            }
+        }
+
+        Animal.maxAge = 20;
+        Animal.getPushok = function() {
+            return new Animal("Pushok", "1");
+        }
+
+        let animal1 = new Animal('Dog', '9');
+        animal1.graft();
+        Animal.getPushok().print()
+        console.log(Animal.maxAge);
+    </script>
+</body>
+</html>
