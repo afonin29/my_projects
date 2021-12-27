@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(235, 163, 163, 0.3);
+}
+
+.clock {
+    width:350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://user-images.githubusercontent.com/42720361/80282419-a293a400-8711-11ea-81c7-1c44e2980db2.png);
+    background-size: cover;
+    border: 16px solid rgba(209, 83, 25, 1);
+    border-radius: 50%;
+    box-shadow: 10px 3px 50px rgba(218, 135, 149, 1);
+}
+
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.clock .hour, .clock .min, .clock .sec {
+    position: absolute;
+}
+
+.clock .hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+.clock .min, .mn {
+    width: 190px;
+    height: 190px;
+}
+.clock .sec, .sc {
+    width: 230px;
+    height: 230px;
+}
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    border-radius: 50%;
+}
+.hr:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: rgba(209, 83, 25, 1);
+    z-index: 3;
+    border-radius: 6px 6px 0 0;
+}
+.mn:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: rgba(231, 112, 112, 1);
+    z-index: 4;
+    border-radius: 6px 6px 0 0;
+}
+.sc:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: rgb(243, 155, 155);
+    z-index: 5;
+    border-radius: 6px 6px 0 0;
+}
+
+@keyframes animate {
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);  
+  }
+}

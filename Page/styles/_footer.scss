@@ -1,0 +1,164 @@
+footer {
+  position: absolute;
+  width: 1444px;
+  height: 417px;
+  left: -2px;
+  top: 935px;
+  background: #2c2c2c;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  img {
+    position: absolute;
+    width: 145px;
+    height: 94px;
+    left: 116px;
+    top: 58px;
+  }
+  .contacts {
+    position: absolute;
+    left: 25%;
+    right: 32.99%;
+    top: 13.91%;
+    bottom: 31.18%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  .contacts1 {
+    ul {
+      display: inline;
+      list-style-position: outside;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 45px;
+      left: 0px;
+      li {
+        list-style-type: none;
+        @include font14;
+      }
+    }
+    p {
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include font16;
+      margin-bottom: 25px;
+    }
+  }
+  .contacts2 {
+    ul {
+      display: inline;
+      list-style-position: outside;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 45px;
+      left: 200px;
+      li {
+        list-style-type: none;
+        a {
+          @include font14;
+          text-decoration: none;
+        }
+      }
+      .map {
+        width: 11px;
+        height: 16px;
+        top: 0px;
+        left: -30px;
+      }
+      .phone {
+        width: 16px;
+        height: 16px;
+        top: 67px;
+        left: -30px;
+      }
+      .mail {
+        width: 16px;
+        height: 11px;
+        top: 98px;
+        left: -30px;
+      }
+    }
+    p {
+      position: absolute;
+      left: 170px;
+      top: 0;
+      @include font16;
+    }
+  }
+  .social {
+    position: absolute;
+    width: 193px;
+    height: 64px;
+    right: 212px;
+    top: 58px;
+    p {
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include font16;
+    }
+    img {
+      position: absolute;
+      width: 22px;
+      height: 19px;
+      top: 43px;
+      background: #2c2c2c;
+    }
+    .fb {
+      position: absolute;
+      width: 9.23px;
+      height: 18.99px;
+      left: 0px;
+      top: 46px;
+    }
+    .tw {
+      position: absolute;
+      width: 21.01px;
+      height: 16px;
+      left: 44px;
+      top: 48px;
+    }
+    .in {
+      position: absolute;
+      width: 19.98px;
+      height: 18.02px;
+      top: 46px;
+      left: 107px;
+    }
+    .pi {
+      position: absolute;
+      width: 14px;
+      height: 18px;
+      left: 163px;
+      top: 46px;
+    }
+  }
+
+  #line {
+    position: absolute;
+    width: 1440px;
+    height: 0px;
+    left: 0px;
+    top: 347px;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    border: 1px solid #ffffff;
+  }
+  p {
+    position: absolute;
+    width: 258px;
+    height: 22px;
+    right: 591px;
+    bottom: 24px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: rgba(200, 200, 200, 0.5);
+  }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>@font-face</title>
+    <script src="map.js"></script>
+    <script src="formvalidation.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'TT Hoves';
+            src: url('TTHoves-Regular.eot');
+            src: local('TT Hoves Regular'), local('TTHoves-Regular'),
+                url('TTHoves-Regular.eot?#iefix') format('embedded-opentype'),
+                url('TTHoves-Regular.woff2') format('woff2'),
+                url('TTHoves-Regular.woff') format('woff'),
+                url('TTHoves-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .error {
+            border: 2px solid #e23939;
+        }
+
+        .valid {
+            border: 2px solid #81e569;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img src="img/Group 8.png" alt="">
+            <img src="img/Vector(3).png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li class="with-line">
+                    <a href="#">ГЛAВНАЯ</a>
+                </li>
+                <li>
+                    <a href="#">ГАЛЕРЕЯ</a>
+                </li>
+                <li>
+                    <a href="#">ПРОЕКТЫ</a>
+                </li>
+                <li>
+                    <a href="#">СЕРТИФИКАТЫ</a>
+                </li>
+                <li>
+                    <a href="#">КОНТАКТЫ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="first-block">
+            <div class="text-prodject-home">
+                <h1>PROJECT</h1>
+                <h1 class="home">HOME</h1>
+            </div>
+
+            <button class="button-left">&#8592</button>
+            <button class="button-right">&#8594</button>
+
+            <pre>01       /       02</pre>
+
+            <div>
+                <img src="img/Rectangle 6.png" alt="">
+                <button id="button-in-picture">ВЗГЛЯНУТЬ &#8594</button>
+            </div>
+        </div>
+        <div class="second-block">
+            <div>
+                <img class="rectangle8" src="img/Rectangle 8.png" alt="">
+                <img class="rectangle10" src="img/Rectangle 10.png" alt="">
+            </div>
+            <div>
+                <img class="rectangle9" src="img/Rectangle 9.png" alt="">
+            </div>
+            <div>
+                <h1>О компании</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil eveniet aliquid provident eius?
+                    Molestiae voluptas rem quasi quaerat, nemo quam blanditiis totam pariatur cumque ad et suscipit
+                    deleniti perferendis quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex
+                    necessitatibus architecto aliquam tempore? Cupiditate exercitationem expedita voluptatibus
+                    molestias.</p>
+                <button>ЧИТАТЬ &#8594 </button>
+
+            </div>
+        </div>
+        <div class="third-block">
+            <h1>Основные задачи</h1>
+            <div class="text1">
+                <img src="img/1.png" alt="">
+                <p>Создание комфортных условий и повышение качества обслуживания клиентов</p>
+            </div>
+            <div class="text2">
+                <img src="img/2.png" alt="">
+                <p>Постоянно совершенствовать качество предоставляемых услуг путем обучения персонала, закупки нового
+                    оборудования и
+                    усиленной рекламы на рынке</p>
+            </div>
+        </div>
+        <div class="fourth-block">
+            <h1>Наши проекты</h1>
+            <div class="two-pictures">
+                <img src="img/Rectangle 12.png" alt="">
+                <img id="grey-rectangle" src="img/Rectangle 17.png" alt="">
+                <img src="img/image 15.png" alt="">
+                <h1>ДОСУГОВЫЙ
+                    ЦЕНТР</h1>
+                <p>ПОДРОБНЕЕ &#8594</p>
+            </div>
+            <div class="three-pictures">
+                <img src="img/image 16.png" alt="">
+                <img src="img/image 17.png" alt="">
+                <img src="img/image 18.png" alt="">
+            </div>
+            <button>ВСЕ ПРОЕКТЫ &#8594</button>
+        </div>
+        <div class="fifth-block">
+            <h1>Связаться с нами</h1>
+            <div class="block-form">
+                <form>
+                    <input type="text" value="" placeholder="Имя" name="userName" data-val="\S"
+                        data-val-msg="Введите значение" data-val-msg-id="checkUserName" />
+                    <span id="checkUserName"></span> <br>
+                    <input type="text" pattern="\d{3}-\d{2}-\d{2}" placeholder="Номер телефона*"
+                        data-val="\d{3}-\d{2}-\d{2}" data-val-msg="Формат телефона 000-00-00"
+                        data-val-msg-id="checkNumberPhone" />
+                    <span id="checkNumberPhone"></span> <br>
+                    <input type="text" name="email" placeholder="E-mail*"
+                        data-val="\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b" data-val-msg="Вы ввели не правильный email"
+                        data-val-msg-id="checkEmail" />
+                    <span id="checkEmail"></span> <br>
+                    <select>
+                        <option disabled selected>Интересующий товар/услуга</option>
+                        <option value=" услуга1">услуга1</option>
+                        <option value="услуга2">услуга2</option>
+                        <option value="услуга3">услуга3</option>
+                    </select>
+                    <textarea name="comment" id="" cols="30" rows="10" placeholder="Сообщение*"></textarea>
+                    <input id="button-submit" type="submit" value="ОТПРАВИТЬ &#8594" data-val=""
+                        data-val-msg="Допущены ошибки при заполнении формы." data-val-msg-id="checkSubmit" />
+                    <span id="checkSubmit"></span>
+                </form>
+                <p>Отправляя заявку Вы соглашаетесь
+                    с политикой
+                    конфиденциальности</p>
+            </div>
+            <div><img id="img-with-map" src="img/image 12.png" alt="">
+            </div>
+            <div id="map1"></div>
+
+            <!-- <button>ОТПРАВИТЬ &#8594</button> -->
+        </div>
+    </main>
+    <footer>
+        <div>
+            <img src="img/Group 11 1.png" alt="">
+        </div>
+        <div class="contacts">
+            <div class="contacts1">
+                <p>Информация</p>
+                <ul>
+                    <li>
+                        Главная
+                    </li>
+                    <li>
+                        Галерея
+                    </li>
+                    <li>
+                        Проекты
+                    </li>
+                    <li>
+                        Сертификкаты
+                    </li>
+                    <li>
+                        Контакты
+                    </li>
+                </ul>
+            </div>
+            <div class="contacts2">
+                <p>Контакты</p>
+                <ul>
+                    <li><img class="map" src="img/Vector.png" alt=""> <a href="#">100000, Республика Казахстан, г.
+                            Караганда, ул.
+                            Телевизионная 10</a></li><br>
+                    <li><img class="phone" src="img/Vector (1).png" alt=""> <a href="#"> +38 (000) 000 00 00</a></li>
+                    <li><img class="mail" src="img/Vector (2).png" alt=""> <a href="#">mail@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social">
+            <p>Социальные сети</p>
+            <img class="fb" src="img/Shape (1).png" alt="">
+            <img class="tw" src="img/Shape.png" alt="">
+            <img class="in" src="img/Shape (3).png" alt="">
+            <img class="pi" src="img/Shape (2).png" alt="">
+
+        </div>
+        <img id="line" src="img/Line 3.png" alt="">
+        <p>© 2019 Digital Project. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>

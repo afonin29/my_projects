@@ -1,0 +1,109 @@
+.fifth-block {
+  position: absolute;
+  width: 1170px;
+  height: 603px;
+  left: 135px;
+  top: 2912px;
+  h1 {
+    position: absolute;
+    width: 521px;
+    height: 64px;
+    left: 0px;
+    top: -20px;
+    color: #bdbdbd;
+    @include font64;
+  }
+  #img-with-map {
+    position: absolute;
+    width: 749px;
+    height: 369px;
+    left: 421px;
+    top: 86px;
+  }
+  #map1 {
+    position: absolute;
+    width: 700px;
+    height: 300px;
+    left: 450px;
+    top: 120px;
+  }
+
+  p {
+    position: absolute;
+    width: 331px;
+    height: 34px;
+    left: 40px;
+    top: 477px;
+    font-family: TT Hoves;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #333333;
+  }
+  form {
+    display: table-caption;
+    span {
+      color: rgb(241, 7, 7);
+    }
+    #checkUserName {
+      position: relative;
+      top: -5px;
+    }
+    #checkNumberPhone {
+      position: relative;
+      top: -5px;
+    }
+    #checkEmail {
+      position: relative;
+      top: -5px;
+    }
+    input {
+      width: 391px;
+      height: 46px;
+      background: #f3f3f3;
+      position: relative;
+      left: 0px;
+      top: 70px;
+      margin-bottom: 10px;
+      border: none;
+    }
+    select {
+      width: 391px;
+      height: 46px;
+      background: #f3f3f3;
+      position: relative;
+      left: 0px;
+      top: 70px;
+      margin-bottom: 10px;
+      border: none;
+      font-family: TT Hoves;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.04em;
+      color: #8d8d8d;
+    }
+    textarea {
+      position: absolute;
+      width: 391px;
+      height: 147px;
+      left: 0px;
+      top: 308px;
+      background: #f3f3f3;
+      border: none;
+    }
+    #button-submit {
+      position: absolute;
+      width: 222px;
+      height: 71px;
+      left: 0px;
+      top: 532px;
+      background: #333333;
+      color: #ffffff;
+      @include font12;
+    }
+  }
+}

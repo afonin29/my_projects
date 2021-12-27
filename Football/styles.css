@@ -1,0 +1,15 @@
+#field {
+  background-image: url("./assets/court.png");
+  width: 1024px;
+  height: 551px; }
+
+#ball {
+  position: relative;
+  background-image: url("./assets/ball.png");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  left: 487px;
+  top: 250.5px; }
+
+/*# sourceMappingURL=styles.css.map */

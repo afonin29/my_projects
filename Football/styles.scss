@@ -1,0 +1,17 @@
+@import 'variables.scss';
+
+#field {
+    background-image: url('./assets/court.png');
+    width: $width;
+    height: $height;
+}
+
+#ball {
+    position:relative;
+    background-image: url('./assets/ball.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    left: $width/2 - $ball_width/2;
+    top: $height/2 - $ball_height/2;
+}

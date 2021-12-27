@@ -1,0 +1,72 @@
+.fourth-block {
+  position: absolute;
+  width: 1170px;
+  height: 765px;
+  left: 135px;
+  top: 2027px;
+  h1 {
+    position: absolute;
+    width: 427px;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+    @include font64;
+  }
+  .two-pictures {
+    position: absolute;
+    top: 124px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    h1 {
+      position: absolute;
+      width: 413px;
+      height: 128px;
+      left: 79px;
+      top: 48px;
+      font-family: TT Hoves;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 64px;
+      color: #ffffff;
+    }
+    p {
+      position: absolute;
+      width: 222px;
+      height: 71px;
+      left: 79px;
+      top: 190px;
+      @include font12;
+      color: #ffffff;
+      border: none;
+    }
+  }
+  .three-pictures {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: 30px;
+    position: relative;
+    left: 0px;
+    top: 409px;
+  }
+  button {
+    position: absolute;
+    width: 222px;
+    height: 71px;
+    left: 948px;
+    top: 694px;
+    background: #333333;
+    @include font12;
+    color: #ffffff;
+  }
+  #grey-rectangle {
+    position: absolute;
+    width: 570px;
+    height: 255px;
+    left: 0px;
+    top: 0px;
+    background: #333333;
+    opacity: 0.8;
+  }
+}

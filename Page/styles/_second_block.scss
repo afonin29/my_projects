@@ -1,0 +1,61 @@
+.second-block {
+  display: grid;
+  grid-template-columns: 30% 33% 33%;
+  position: absolute;
+  width: 1170px;
+  height: 435px;
+  left: 135px;
+  top: 1054px;
+  background: #fbfbfb;
+  .rectangle8 {
+    position: absolute;
+    width: 270px;
+    height: 265px;
+    left: 100px;
+    top: 30px;
+  }
+  .rectangle10 {
+    position: absolute;
+    width: 270px;
+    height: 140px;
+    left: 100px;
+    top: 325px;
+  }
+  .rectangle9 {
+    position: absolute;
+    width: 270px;
+    height: 345px;
+    left: 400px;
+    top: 60px;
+  }
+  button {
+    position: absolute;
+    width: 222px;
+    height: 71px;
+    left: 700px;
+    top: 334px;
+    border: none;
+    background: #ffffff;
+    @include font12;
+  }
+  h1 {
+    position: absolute;
+    width: 354px;
+    height: 64px;
+    left: 700px;
+    top: 30px;
+    @include font64;
+  }
+  p {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 700px;
+    top: 114px;
+    font-family: TT Hoves;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}

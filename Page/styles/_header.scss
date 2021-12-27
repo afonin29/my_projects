@@ -1,0 +1,43 @@
+header {
+  position: absolute;
+  width: 1440px;
+  height: 102px;
+  left: 0px;
+  top: 0px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  div {
+    position: absolute;
+    left: 136.45px;
+    top: 29.14px;
+    bottom: 31.33px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+nav {
+  position: absolute;
+  left: 330px;
+  right: 269px;
+  top: 44.69px;
+  bottom: 45.66px;
+  margin-left: 145px;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    li {
+      margin-left: 60px;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: #333333;
+        @include font12;
+      }
+    }
+    .with-line {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      width: 52%;
+    }
+  }
+}
