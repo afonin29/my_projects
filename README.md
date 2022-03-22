@@ -1,2 +1,2 @@
 # my_projects
-Scope of my projects, homeworks and everythink I'd like to push here
+Scope of my projects, homeworks and everything I'd like to push here
