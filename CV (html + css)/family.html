@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container family-container">
+        <div class="header header-family">
+            <div class="header_item"><a href="index.html">Home</a></div>
+            <div class="header_item"><a href="education.html">Education</a></div>
+            <div class="header_item"><a href="skills.html">Skills</a></div>
+            <div class="header_item"><a href="hobbies.html">Hobbies</a></div>
+            <div class="header_item"><a href="family.html">Family  </a></div>
+        </div>
+        <div class="wrapper-family">
+            <div class="family-header">My family and friends</div>
+            <div class="family-button-item">
+                <button class="family-item-name-me" id="button-more-me">
+                    Me
+                </button>
+            </div>
+            <div class="family-info-item family-item-me">
+                <div class="family-item-me-info">I am Anton :)</div>
+            </div>
+            <div class="family-button-item">
+                <button class="family-item-name-family" id="button-more-family">
+                    Family
+                </button>
+            </div>
+            <div class="family-info-item family-item-fam">
+                <div class="family-item-family-info">
+                    <ul type="none">
+                        <li>My Mum</li>
+                        <li>My Dad</li>
+                        <li>My Sister</li>
+                        <li>My Niece</li>
+                        <li>My Grandma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="family-button-item">
+                <button class="family-item-name-friends" id="button-more-friends">
+                    Friends
+                </button>
+            </div>
+            <div class="family-info-item family-item-friends">
+                <div class="family-item-friends-info">My friends are the best</div>
+            </div>
+            <div></div>
+        </div>
+        <div class="footer footer_skills">
+            <a class="footer_facebook" href="https://www.facebook.com/">
+                <div class="footer_facebook_logo">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook.png" />
+                </div>
+                <div class="footer_facebook_link">facebook.com/anton.afonin</div>
+            </a>
+            <a class="footer_website" href="#">
+                <div class="footer_website_link">mysite.com</div>
+            </a>
+            <a class="footer_instagram" href="https://www.instagram.com/">
+                <div class="footer_instagram_logo">
+                    <img src="https://img.icons8.com/ios/50/000000/instagram-new--v2.png" />
+                </div>
+                <div class="footer_instagram_link">instagram.com/afoninnn</div>
+            </a>
+        </div>
+    </div>  
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#button-more-me').click(() => $('.family-item-me').toggle(100));
+            $('#button-more-family').click(() => $('.family-item-fam').toggle(100));
+            $('#button-more-friends').click(() => $('.family-item-friends').toggle(100));
+        })
+    </script>
+</body>
+</html>

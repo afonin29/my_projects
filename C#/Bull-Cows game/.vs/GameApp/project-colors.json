@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "42a5c2c8-c460-4df1-8971-246ea253360c": {
+      "ProjectGuid": "42a5c2c8-c460-4df1-8971-246ea253360c",
+      "DisplayName": "WordGameApp",
+      "ColorIndex": 0
+    },
+    "206b40e4-a33a-4e54-9372-1bc49b21399c": {
+      "ProjectGuid": "206b40e4-a33a-4e54-9372-1bc49b21399c",
+      "DisplayName": "GameAppLibrary",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "341b7155-eb52-4b6f-84b0-cb7f727947d2": {
+      "ProjectGuid": "341b7155-eb52-4b6f-84b0-cb7f727947d2",
+      "DisplayName": "GameAppDALLibrary",
+      "ColorIndex": 2
+    },
+    "27c41d01-0f69-4745-9039-81563484a77d": {
+      "ProjectGuid": "27c41d01-0f69-4745-9039-81563484a77d",
+      "DisplayName": "GameAppBLLibrary",
+      "ColorIndex": 3
+    },
+    "967f9b11-6165-4aa3-953f-fd5ad3fc9dcf": {
+      "ProjectGuid": "967f9b11-6165-4aa3-953f-fd5ad3fc9dcf",
+      "DisplayName": "WordGameTests",
+      "ColorIndex": 4
+    },
+    "2e1af528-6af7-4454-9902-18095aef89b2": {
+      "ProjectGuid": "2e1af528-6af7-4454-9902-18095aef89b2",
+      "DisplayName": "GameAppTests",
+      "ColorIndex": 5
+    },
+    "30b164d4-7ce3-40c5-9a96-50acdd18f2c5": {
+      "ProjectGuid": "30b164d4-7ce3-40c5-9a96-50acdd18f2c5",
+      "DisplayName": "GameAppBLTests",
+      "ColorIndex": 6
+    }
+  },
+  "NextColorIndex": 7
+}
