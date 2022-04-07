@@ -25,7 +25,7 @@ const Navbar = () => {
                     {user ? 
                         <Button variant="outlined" onClick={signOutUser} style={{backgroundColor: "white"}}>Sign out</Button>
                         :
-                        <Link to={LOGIN_PATH}>
+                        <Link href="./login">
                             <Button variant="outlined" style={{backgroundColor: "white"}}>Login</Button>
                         </Link>
                     }
