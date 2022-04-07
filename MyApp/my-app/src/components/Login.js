@@ -1,21 +1,13 @@
 import React from 'react';
-import Grid from '@mui/material/Grid'
-import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button'
-import FormControl from '@mui/material/FormControl'
 import '../App.css'
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword  } from 'firebase/auth';
-import { Link } from '@mui/material';
+import { getAuth } from 'firebase/auth';
+import { Link, FormControl, Button, TextField, Grid } from '@mui/material';
 import { useState } from 'react';
+import { signInWithGoogle } from '../auth'
 
 const Login = () => {
-
-    const signInWithGoogle = async () => {
-        const provider = new GoogleAuthProvider();
-        await signInWithPopup(getAuth(), provider);
-    }
 
     const auth = getAuth();
     const [email, setEmail] = useState('');
